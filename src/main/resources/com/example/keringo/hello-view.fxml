@@ -11,16 +11,16 @@
       <VBox alignment="TOP_CENTER" prefWidth="100.0">
          <children>
             <Button mnemonicParsing="false" prefWidth="100.0" text="Start" />
-            <Slider blockIncrement="2.0" majorTickUnit="5.0" max="11.0" min="1.0" minorTickCount="4" value="1.0">
+            <Slider fx:id="sdSpeed" blockIncrement="2.0" majorTickUnit="5.0" max="11.0" min="1.0" minorTickCount="4" onMouseDragOver="#onCsuszka" value="1.0">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin></Slider>
-            <Label text="Speed: 1 ">
+            <Label fx:id="lbSpeed" text="Speed: 1 ">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
             </Label>
-            <Slider max="300.0" min="32.0" value="200.0">
+            <Slider fx:id="sdRadius" max="300.0" min="32.0" value="200.0">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
