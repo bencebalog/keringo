@@ -7,11 +7,11 @@
 
 <HBox xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.keringo.HelloController">
    <children>
-      <Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: lightgrey;" />
+      <Pane fx:id="pnJatek" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: lightgrey;" />
       <VBox alignment="TOP_CENTER" prefWidth="100.0">
          <children>
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Start" />
-            <Slider fx:id="sdSpeed" blockIncrement="2.0" majorTickUnit="5.0" max="11.0" min="1.0" minorTickCount="4" onMouseDragOver="#onCsuszka" value="1.0">
+            <Button fx:id="btButton" mnemonicParsing="false" onAction="#onButtonClick" prefWidth="100.0" text="Start" />
+            <Slider fx:id="sdSpeed" blockIncrement="2.0" majorTickUnit="5.0" max="11.0" min="1.0" minorTickCount="4" value="1.0">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin></Slider>
@@ -25,17 +25,17 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Slider>
-            <Label layoutX="36.0" layoutY="59.0" text="Radius: 200">
+            <Label fx:id="lbRadius" layoutX="36.0" layoutY="59.0" text="Radius: 200">
                <VBox.margin>
                   <Insets bottom="20.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="64.0" fitWidth="64.0" onMousePressed="#onKep1Click" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@ball1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="64.0" fitWidth="64.0" onMousePressed="#onKep2Click" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@ball2.png" />
                </image>
